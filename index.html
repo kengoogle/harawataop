@@ -4,31 +4,33 @@ import { Button } from "@/components/ui/button";
 
 const StartScreen = () => {
   return (
-    <div className="min-h-screen bg-black text-red-600 flex items-center justify-center p-4">
-      <Card className="w-full max-w-[95vw] sm:max-w-sm bg-gray-900 border-red-800 shadow-lg shadow-red-900/50">
-        <CardHeader className="p-4">
-          <CardTitle className="text-2xl sm:text-3xl font-bold text-center text-red-500 font-serif">はらわたゲーム</CardTitle>
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
+      <Card className="w-[350px] bg-gray-900 border-red-900 shadow-lg shadow-red-900/50">
+        <CardHeader>
+          <CardTitle className="text-3xl font-bold text-center text-red-600 font-serif animate-pulse">
+            はらわたゲーム
+          </CardTitle>
         </CardHeader>
-        <CardContent className="p-4">
-          <p className="text-xs sm:text-sm text-gray-400 mb-4 font-mono leading-tight">
-            警告：このゲームはあなたの精神を蝕みます。上から降り注ぐ呪われたブロックは、消しても意味がなく、終わりもありません。「はらわたもち」の文字を並べる悪夢のような体験が、あなたを待っています。
+        <CardContent>
+          <p className="text-sm text-gray-400 font-mono leading-relaxed">
+            説明：このゲームはテトリスのようなパズルゲームです。上から降ってくるブロックを、いくら消しても得点特典もなく、クリアもできません。ブロックの中の文字を、縦、横どちらでもよいので「はらわたもち」と並べるだけのとっても簡単な、赤ちゃんにでも、ミジンコにでもミドリムシにでもできるゲームです。
           </p>
-          <p className="text-xs sm:text-sm text-red-400 font-bold italic">
-            さあ、深淵を覗き込み、その代償を払う覚悟はありますか？
+          <p className="text-sm text-red-500 mt-4 font-bold italic">
+            さあ、ゲームをクリアして、特典映像を見よう。
           </p>
         </CardContent>
-        <CardFooter className="flex flex-col gap-3 p-4">
+        <CardFooter className="flex flex-col gap-4">
           <Button 
-            className="w-full bg-red-700 hover:bg-red-800 text-white text-sm sm:text-base py-2" 
+            className="w-full bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out transform hover:scale-105"
             onClick={() => window.location.href = 'https://kengoogle.github.io/TETRIS01/'}
           >
-            魂を賭ける
+            はらわたやる
           </Button>
           <Button 
-            className="w-full bg-gray-700 hover:bg-gray-800 text-gray-300 text-sm sm:text-base py-2" 
+            className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded border border-red-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             onClick={() => window.location.href = 'https://teamkimi.wixsite.com/ayabechiku/kimi'}
           >
-            逃げ出す
+            はらわたやらん
           </Button>
         </CardFooter>
       </Card>
